@@ -1,0 +1,25 @@
+# Credit Risk Classification Report
+
+## Overview of the Analysis
+
+## In this analysis, two supervised machine learning models were used to analyze the credit worthiness of borrowers from historical lending data:
+
+## Its data includes a lending history. The purpose of this analysis is to use  data to build a supervised machine learning model that predicts the creditworthiness of borrowers and classifies each borrower as  a healthy loan or a high-risk loan. We start this analysis by importing  data into Jupyter Notebook and creating a database. Then I  create a label for the model, y, determined from the "loan_status" column, then I create a feature dataframe, x, from the rest of the columns. At this point in our process, we can see that the number of reasonable loans far exceeds the number of high-risk loans. This means that the variation in accuracy when forecasting our high-risk loans will be much larger, and this can cause accuracy problems with our model. After going through training, testing, and decomposition, we then used a logistic regression model to fit our training data. We then make our predictions on the test data label using our fitted model and test feature data. After making the prediction, we will evaluate the performance of the model using the  accuracy score,  confusion matrix, and  classification ratio.
+
+##    I then go through the same procedure again using resampled data to see whether our model can forecast this data more accurately. I start by using RandomOverSample to resample the data and make sure the labels have an equal number of data points. Repeating the procedure we used in our initial model, we find that the model definitely fits better with the oversampled data, we can see that the model is still accurately predicting healthy loans, and high-risk loans are now showing a higher recall and accuracy score, but the model is still not significantly more accurate than model one that used our initial predicted data. 
+
+
+## Results
+
+Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
+
+## * Machine Learning Model 1:
+  * The model predicts a healthy loan with very high accuracy, recovery, and  score that is significantly better than a high-risk loan. This would be an indication that the model adequately predicts high-risk loans, but not  well enough. Because high-risk loans are often more difficult to predict, we prefer greater accuracy and higher recovery scores to be able to better predict the risk associated with these borrowers. 
+
+
+## * Machine Learning Model 2:
+  * This model uses resampled data, our results show an improved model with a score for accuracy, recall and accuracy  for the other model with a high score of 1.00, this model improves  our accuracy compared to the previous model, but  our accuracy has not improved and still produces the same results. 
+  
+## Summary
+* The Second Machine Learning Model performed the best, we can see in the classsification report that our second model yielded a higher accuracy, high recall scores and averages, as well as high precision scores except that our high risk loan precision scores have still not improved. 
+* It is still important to predict the healthy loan borrowers and this model does that however, accuracy on models is also important and this model has a higher accuracy score for our high-risk borrower. 
